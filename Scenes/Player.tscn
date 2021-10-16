@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Textures/janken_choki.png" type="Texture" id=1]
+[ext_resource path="res://Textures/janken_pa.png" type="Texture" id=2]
+[ext_resource path="res://Textures/janken_gu.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=4]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="RockButton" type="TextureButton" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 59.2328
+margin_top = -119.141
+margin_right = 481.233
+margin_bottom = 341.859
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+texture_disabled = ExtResource( 3 )
+texture_focused = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScissorsButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -69.129
+margin_top = -127.617
+margin_right = 352.871
+margin_bottom = 333.383
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 1 )
+texture_disabled = ExtResource( 1 )
+texture_focused = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PaperButton" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -170.147
+margin_top = -119.569
+margin_right = 303.853
+margin_bottom = 316.431
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 2 )
+texture_focused = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="RockButton" to="." method="_on_RockButton_pressed"]
+[connection signal="pressed" from="ScissorsButton" to="." method="_on_ScissorsButton_pressed"]
+[connection signal="pressed" from="PaperButton" to="." method="_on_PaperButton_pressed"]
